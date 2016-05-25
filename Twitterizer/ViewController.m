@@ -9,6 +9,8 @@
 #import "ViewController.h"
 
 @interface ViewController ()
+@property (weak, nonatomic) IBOutlet UILabel *textLabel;
+@property (weak, nonatomic) IBOutlet UITextField *textField;
 
 @end
 
@@ -20,6 +22,34 @@
     NSLog(@"Success!");
 }
 
+- (IBAction)hashTagButton:(id)sender {
+}
 
+- (IBAction)twitterizeButton:(id)sender {
+    
+    NSString *userInput = self.textField.text;
+    
+    for (int i = 0; i <self.textField.text.length; i++) {
+        
+       
+        if([userInput characterAtIndex:i] == @"a")
+        {
+            (NSString *))userInput[i] =@"";
+            
+        }
+        
+        
+        
+        
+        
+    }
+    
+    //self.textLabel.text = userInput;
+    
+    
+}
+
+- (IBAction)reverseButton:(id)sender {
+}
 
 @end
